@@ -1,11 +1,11 @@
-# 🏡 Real Estate 360 – Salesforce Application
+#  Real Estate 360 – Salesforce Application
 
 Real Estate 360 is a Salesforce-based application designed to manage property listings, offers, visits, and commissions using a combination of **Salesforce Admin configuration** and **Developer tools (Apex, Triggers, LWC)**.  
 This project demonstrates real-world Salesforce development practices, including data modeling, automation, custom UI, reporting, and testing.
 
 ---
 
-## 🚀 Project Objective
+##  Project Objective
 
 To build a real-world **Salesforce Sales Cloud application** that simulates how a real estate company manages:
 
@@ -19,15 +19,15 @@ This project is intended as a **portfolio project for a Salesforce Developer**.
 
 ---
 
-## ☁️ Salesforce Cloud Used
+##  Salesforce Cloud Used
 
 - **Sales Cloud**
 
 ---
 
-## 🧱 Data Model
+##  Data Model
 
-### 🔹 Property__c
+###  Property__c
 Represents a real estate property.
 
 **Key Fields:**
@@ -43,7 +43,7 @@ Represents a real estate property.
 
 ---
 
-### 🔹 Offer__c
+###  Offer__c
 Represents an offer made by a buyer on a property.
 
 **Relationships:**
@@ -58,7 +58,7 @@ Represents an offer made by a buyer on a property.
 
 ---
 
-### 🔹 Property_Visit__c
+###  Property_Visit__c
 Tracks visits made to a property.
 
 **Relationship:**
@@ -66,7 +66,7 @@ Tracks visits made to a property.
 
 ---
 
-### 🔹 Commission__c
+###  Commission__c
 Tracks commission earned by an agent after deal closure.
 
 **Relationship:**
@@ -80,7 +80,7 @@ Tracks commission earned by an agent after deal closure.
 
 ---
 
-## 🛠️ Admin Configuration
+##  Admin Configuration
 
 - Custom App: **Real Estate 360**
 - Custom Objects and Fields
@@ -91,9 +91,9 @@ Tracks commission earned by an agent after deal closure.
 
 ---
 
-## ⚙️ Automation & Development
+##  Automation & Development
 
-### 🔹 Apex & Triggers
+###  Apex & Triggers
 Bulk-safe Apex architecture using:
 - Trigger Handler Pattern
 - Selector Classes
@@ -106,7 +106,7 @@ Bulk-safe Apex architecture using:
 
 ---
 
-### 🔹 Lightning Web Component (LWC)
+###  Lightning Web Component (LWC)
 
 **Component:** `propertyList`
 
@@ -123,7 +123,7 @@ This demonstrates **custom UI development** beyond standard Lightning App Builde
 
 ---
 
-### 🔹 Salesforce Flow
+###  Salesforce Flow
 
 **Flow:** Notify Seller on New Offer
 
@@ -134,7 +134,7 @@ This demonstrates **custom UI development** beyond standard Lightning App Builde
 
 ---
 
-## 📊 Reports & Dashboards
+##  Reports & Dashboards
 
 **Reports Created:**
 - Properties by Status
@@ -146,7 +146,7 @@ This demonstrates **custom UI development** beyond standard Lightning App Builde
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 - Apex Test Classes created for all Apex logic
 - All tests pass successfully
@@ -157,7 +157,7 @@ This demonstrates **custom UI development** beyond standard Lightning App Builde
 
 ---
 
-## 🔑 Key Skills Demonstrated
+##  Key Skills Demonstrated
 
 - Salesforce Data Modeling
 - Apex Programming & Triggers
@@ -170,21 +170,12 @@ This demonstrates **custom UI development** beyond standard Lightning App Builde
 
 ---
 
-## 📌 Why Buyer__c Field Exists
-
-The **Buyer__c (Lookup → Account)** field is included to:
-- Represent real-world buyer entities
-- Support reporting and future enhancements
-- Enable scalability (e.g., buyer notifications, analytics)
-
-While not used in automation currently, it reflects **realistic data modeling**.
-
 ## Screenshots
 
 ### Property List (LWC)
-![Property List](screenshots/Property List Filter.png)   NoifyEmailFlow
+![Property List](screenshots/PropertyListFilter.png)
 
-### Notification Flow
+### Flow
 ![NoifyEmailFlow](screenshots/NoifyEmailFlow.png)
 
 ### Test Property Visit Service(Test Class)
@@ -192,6 +183,9 @@ While not used in automation currently, it reflects **realistic data modeling**.
 
 ### Test Offer Service(Test Class)
 ![TestOfferService](screenshots/TestOfferService.png)
+
+### Reports & Dashboards
+![Dashboards](screenshots/dashboard-overview.png)
 
 
 
