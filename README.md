@@ -185,7 +185,7 @@ This demonstrates **custom UI development** beyond standard Lightning App Builde
 ![TestOfferService](screenshots/TestOfferService.png)
 
 ### Reports & Dashboards
-![Dashboards](screenshots/dashboard-overview.png)
+![Dashboards](screenshots/Dashboard.png)
 
 
 
