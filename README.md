@@ -179,4 +179,20 @@ The **Buyer__c (Lookup → Account)** field is included to:
 
 While not used in automation currently, it reflects **realistic data modeling**.
 
+## Screenshots
+
+### Property List (LWC)
+![Property List](screenshots/Property List Filter.png)   NoifyEmailFlow
+
+### Notification Flow
+![NoifyEmailFlow](screenshots/NoifyEmailFlow.png)
+
+### Test Property Visit Service(Test Class)
+![TestPropertyVisitService](screenshots/TestPropertyVisitService.png)
+
+### Test Offer Service(Test Class)
+![TestOfferService](screenshots/TestOfferService.png)
+
+
+
 ---
