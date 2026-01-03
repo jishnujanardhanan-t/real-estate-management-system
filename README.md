@@ -15,7 +15,6 @@ To build a real-world **Salesforce Sales Cloud application** that simulates how 
 - Agent commissions
 - Automation and analytics
 
-This project is intended as a **portfolio project for a Salesforce Developer**.
 
 ---
 
@@ -119,7 +118,6 @@ Bulk-safe Apex architecture using:
 - Shows seller name instead of ID
 - Real-time data loading via Apex Controller
 
-This demonstrates **custom UI development** beyond standard Lightning App Builder capabilities.
 
 ---
 
@@ -153,7 +151,6 @@ This demonstrates **custom UI development** beyond standard Lightning App Builde
 - Bulk-safe test data created using `@testSetup`
 - Code coverage meets Salesforce deployment standards
 
-> Note: Test data created in test classes does not persist in the org, as Salesforce runs tests in an isolated context.
 
 ---
 
