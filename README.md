@@ -1,85 +1,86 @@
-#  Real Estate 360 – Salesforce Application
+# Real Estate 360 – Salesforce Application
 
-Real Estate 360 is a Salesforce-based application designed to manage property listings, offers, visits, and commissions using a combination of **Salesforce Admin configuration** and **Developer tools (Apex, Triggers, LWC)**.  
-This project demonstrates real-world Salesforce development practices, including data modeling, automation, custom UI, reporting, and testing.
+Real Estate 360 is a Salesforce-based application designed to manage property listings, offers, visits, and commissions using a combination of **Salesforce Admin configuration** and **Developer tools (Apex, Triggers, LWC)**.
+
+This project demonstrates real-world Salesforce development practices including **data modeling, automation, custom UI development, reporting, and testing**.  
+It is built as a **portfolio project for a Salesforce Developer**.
 
 ---
 
-##  Project Objective
+## Project Objective
 
 To build a real-world **Salesforce Sales Cloud application** that simulates how a real estate company manages:
 
-- Properties and sellers
-- Buyer offers
-- Property visits
-- Agent commissions
-- Automation and analytics
-
+- Properties and sellers  
+- Buyer offers  
+- Property visits  
+- Agent commissions  
+- Automation and analytics  
 
 ---
 
-##  Salesforce Cloud Used
+## Salesforce Cloud Used
 
 - **Sales Cloud**
 
 ---
 
-##  Data Model
+## Data Model
 
-###  Property__c
+### Property__c
 Represents a real estate property.
 
 **Key Fields:**
-- Name
-- Address__c
-- Area_sq_ft__c
-- Listed_Date__c
-- Price__c
-- Seller__c (Lookup → Account)
-- Status__c (Available, Under Offer, Sold)
-- Total_Visits__c
+- Name  
+- Address__c  
+- Area_sq_ft__c  
+- Listed_Date__c  
+- Price__c  
+- Seller__c (Lookup → Account)  
+- Status__c (Available, Under Offer, Sold)  
+- Total_Visits__c  
 - Property_Type__c (Villa, Apartment, Plot)
 
 ---
 
-###  Offer__c
+### Offer__c
 Represents an offer made by a buyer on a property.
 
 **Relationships:**
-- Master-Detail → Property__c
+- Master-Detail → Property__c  
 - Lookup → Account (Buyer__c)
 
 **Key Fields:**
-- Offer_Amount__c
-- Offer_Status__c (New, Accepted, Rejected)
-- Buyer__c
-- Offer_Date__c
+- Offer_Amount__c  
+- Offer_Status__c (New, Accepted, Rejected)  
+- Buyer__c  
+- Offer_Date__c  
 
 ---
 
-###  Property_Visit__c
+### Property_Visit__c
 Tracks visits made to a property.
 
 **Relationship:**
-- Master-Detail → Property__c
+- Master-Detail → Property__c  
 
 ---
 
-###  Commission__c
+### Commission__c
 Tracks commission earned by an agent after deal closure.
 
 **Relationship:**
-- Master-Detail → Offer__c
+- Master-Detail → Offer__c  
 
 **Key Fields:**
-- Commission_Percentage__c
-- Commission_Amount__c (Formula)
-- Agent__c (Lookup → User)
-- Payment_Status__c
+- Commission_Percentage__c  
+- Commission_Amount__c (Formula)  
+- Agent__c (Lookup → User)  
+- Payment_Status__c  
 
 ---
 
-##  Admin Configuration
+## Admin Configuration
 
 - Custom App: **Real Estate 360**
 - Custom Objects and Fields
@@ -90,22 +91,21 @@ Tracks commission earned by an agent after deal closure.
 
 ---
 
-##  Automation & Development
+## Apex & Triggers
 
-###  Apex & Triggers
-Bulk-safe Apex architecture using:
+Bulk-safe Apex architecture implemented using:
 - Trigger Handler Pattern
 - Selector Classes
 - Service Classes
 
-**Implemented Logic:**
-- Validate Offer Amount ≥ Property Price
-- Auto-update Property Status to *Under Offer*
-- Auto-increment Total Visits when a visit is created
+**Automations Implemented:**
+- Validate that Offer Amount ≥ Property Price  
+- Auto-update Property Status to *Under Offer*  
+- Auto-increment Total Visits when a Property Visit is created  
 
 ---
 
-###  Lightning Web Component (LWC)
+## Lightning Web Component (LWC)
 
 **Component:** `propertyList`
 
@@ -115,24 +115,29 @@ Bulk-safe Apex architecture using:
   - Property Status
   - Property Type
   - Price Range
-- Shows seller name instead of ID
-- Real-time data loading via Apex Controller
+- Displays Seller Name instead of Seller ID
+- Real-time data loading using Apex Controller
 
+This demonstrates **custom UI development beyond standard Lightning App Builder**.
+
+![Property List LWC](screenshots/PropertyListFilter.png)
 
 ---
 
-###  Salesforce Flow
+## Salesforce Flow
 
 **Flow:** Notify Seller on New Offer
 
 - Type: Record-Triggered Flow
-- Triggered when a new Offer__c is created
+- Triggered when a new Offer__c record is created
 - Automatically sends an email notification to the seller (Account)
-- Demonstrates declarative automation alongside Apex
+- Demonstrates declarative automation working alongside Apex logic
+
+![Notify Seller Flow](screenshots/NoifyEmailFlow.png)
 
 ---
 
-##  Reports & Dashboards
+## Reports & Dashboards
 
 **Reports Created:**
 - Properties by Status
@@ -140,11 +145,13 @@ Bulk-safe Apex architecture using:
 - Total Visits per Property
 
 **Dashboard:**
-- Visual representation of property distribution and engagement
+- Visual representation of property distribution and engagement metrics
+
+![Reports & Dashboard](screenshots/Dashboard.png)
 
 ---
 
-##  Testing
+## Testing
 
 - Apex Test Classes created for all Apex logic
 - All tests pass successfully
@@ -152,9 +159,15 @@ Bulk-safe Apex architecture using:
 - Code coverage meets Salesforce deployment standards
 
 
+### Test Classes
+
+![Test Property Visit Service](screenshots/TestPropertyVisitService.png)
+
+![Test Offer Service](screenshots/TestOfferService.png)
+
 ---
 
-##  Key Skills Demonstrated
+## Key Skills Demonstrated
 
 - Salesforce Data Modeling
 - Apex Programming & Triggers
@@ -162,28 +175,19 @@ Bulk-safe Apex architecture using:
 - Lightning Web Components (LWC)
 - Salesforce Flow Automation
 - Reports & Dashboards
-- Testing & Debugging
-- Git & GitHub version control
+- Validation Rules & Security
+- Salesforce DX (SFDX)
+- Git & GitHub Version Control
 
 ---
 
-## Screenshots
+## Tools & Technologies
 
-### Property List (LWC)
-![Property List](screenshots/PropertyListFilter.png)
-
-### Flow
-![NoifyEmailFlow](screenshots/NoifyEmailFlow.png)
-
-### Test Property Visit Service(Test Class)
-![TestPropertyVisitService](screenshots/TestPropertyVisitService.png)
-
-### Test Offer Service(Test Class)
-![TestOfferService](screenshots/TestOfferService.png)
-
-### Reports & Dashboards
-![Dashboards](screenshots/Dashboard.png)
-
-
+- Salesforce Developer Edition
+- Salesforce DX (SFDX)
+- Visual Studio Code
+- Git & GitHub
+- Lightning Experience
 
 ---
+
